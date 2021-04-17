@@ -53,5 +53,67 @@
                 </tr>
             </table>
         </div>
+        <div id="display" style="float: left; width: 50%" class="column">
+            <h1>Craftable Items / Materials Required</h2>
+                <hr>
+            <h3>Gaming Chair</h1>
+            <table>
+                <colgroup>
+                  <col span="1" style="background-color:grey">
+                  <col style="background-color:skyblue">
+                </colgroup>
+                <tr>
+                  <th>Your Materials</th>
+                  <th>Owned/Required</th>
+                </tr>
+                <tr>
+                  <td>Wood</td>
+                  <td><b id="chair_wood">0</b> / <b id="chair_wood_required">10</b></td>
+                </tr>
+                <tr>
+                    <td>Nails</td>
+                    <td><b id="chair_nails">0</b> / <b id="chair_nails_required">20</b></td>
+                </tr>
+                <tr>
+                    <td>Paint</td>
+                    <td><b id="chair_paint">0</b> / <b id="chair_paint_required">1</b></td>
+                </tr>
+            </table>
+            <button id="craftChair" onclick="craftGamingChair();" disabled>Craft</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>Desktop Table</h3>
+            <table>
+                <colgroup>
+                  <col span="1" style="background-color:grey">
+                  <col style="background-color:skyblue">
+                </colgroup>
+                <tr>
+                  <th>Your Materials</th>
+                  <th>Owned/Required</th>
+                </tr>
+                <tr>
+                  <td>Wood</td>
+                  <td><b id="table_wood">0</b> / <b id="table_wood_required">20</b></td>
+                </tr>
+                <tr>
+                    <td>Nails</td>
+                    <td><b id="table_nails">0</b> / <b id="table_nails_required">30</b></td>
+                </tr>
+                <tr>
+                    <td>Glass</td>
+                    <td><b id="table_glass">0</b> / <b id="table_glass_required">7</b></td>
+                </tr>
+                <tr>
+                    <td>Paint</td>
+                    <td><b id="table_paint">0</b> / <b id="table_paint_required">2</b></td>
+                </tr>
+            </table>
+            <button id="craftTable" onclick="craftDesktopTable();" disabled>Craft</button>
+        </div>
   </body>
 </html>
