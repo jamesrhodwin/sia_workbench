@@ -19,6 +19,14 @@ function addMaterial() {
     }
 }
 
+function craftGamingChair() {
+    document.getElementById('wood_amount').value = parseInt(document.getElementById('wood_amount').value) - parseInt(document.getElementById('chair_wood_required').innerText);
+    document.getElementById('nails_amount').value = parseInt(document.getElementById('nails_amount').value) - parseInt(document.getElementById('chair_nails_required').innerText);
+    document.getElementById('paint_amount').value = parseInt(document.getElementById('paint_amount').value) - parseInt(document.getElementById('chair_paint_required').innerText);
+    document.getElementById('chair_amount').value = parseInt(document.getElementById('chair_amount').value) + 1;
+    update();
+}
+
 function update() {
     var craftChair = document.getElementById('craftChair');
     var craftTable = document.getElementById('craftTable');
@@ -29,4 +37,11 @@ function update() {
     document.getElementById('table_nails').innerText = document.getElementById('nails_amount').value;
     document.getElementById('table_paint').innerText = document.getElementById('paint_amount').value;
     document.getElementById('table_glass').innerText = document.getElementById('glass_amount').value;
+    if (parseInt(document.getElementById('wood_amount').value) >= parseInt(document.getElementById('chair_wood_required').innerText)
+        && parseInt(document.getElementById('nails_amount').value) >= parseInt(document.getElementById('chair_nails_required').innerText)
+        && parseInt(document.getElementById('paint_amount').value) >= parseInt(document.getElementById('chair_paint_required').innerText)) {
+        craftChair.disabled = false;
+    } else {
+        craftChair.disabled = true;
+    }
 }
